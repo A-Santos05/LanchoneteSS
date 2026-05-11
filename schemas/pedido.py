@@ -1,6 +1,14 @@
 from pydantic import BaseModel
 from typing import List
 
+class ObservacaoInput(BaseModel):
+    observacao: str
+
+
+class ObservacaoOut(BaseModel):
+    codigo: int
+    observacao: str
+
 
 class PedidoCreate(BaseModel):
     """Payload para criação de um pedido."""
